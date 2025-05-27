@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         RobotRegistry registry = new RobotRegistry();
 
         registry.registerRobot(new GroundRobot("T-1000", "Cyberdyne", 2022, LocalDate.now(), 45.0, TractionType.ORUGAS));

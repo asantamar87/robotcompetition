@@ -32,9 +32,9 @@ public class GroundRobot extends Robot implements ResistanceEvaluable {
 
     @Override
     public String getResistanceReport() {
-
         return String.format("%s: velocidad máxima de %.1f km/h. %s",
-                getName(), maxSpeed, maxSpeed >= 100 ? "Apto para la competición." : "No cumple los requisitos.");
+                getName(), maxSpeed,
+                (tractionType == TractionType.ORUGAS) ? "Apto para la competición." : "No cumple los requisitos.");
     }
 
 

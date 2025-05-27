@@ -8,8 +8,7 @@ public class AirRobot extends Robot implements ResistanceEvaluable {
     private double maxAltitude;
     private int flightAutonomy;
 
-    public AirRobot(String name, String manufacturer, int manufactureYear, LocalDate registrationDate,
-                    double maxAltitude, int flightAutonomy) {
+    public AirRobot(String name, String manufacturer, int manufactureYear, LocalDate registrationDate, double maxAltitude, int flightAutonomy) {
         super(name, manufacturer, manufactureYear, registrationDate);
         this.maxAltitude = maxAltitude;
         this.flightAutonomy = flightAutonomy;
@@ -33,7 +32,7 @@ public class AirRobot extends Robot implements ResistanceEvaluable {
     public String getResistanceReport() {
         return String.format("%s: altitud máxima de %.0f m y autonomía de %d minutos. %s",
                 getName(), maxAltitude, flightAutonomy,
-                (maxAltitude >= 1000 && flightAutonomy >= 30) ? "Apto para la competición." : "No cumple los requisitos.");
+                (flightAutonomy >= 60) ? "Apto para la competición." : "No cumple los requisitos.");
     }
 }
 

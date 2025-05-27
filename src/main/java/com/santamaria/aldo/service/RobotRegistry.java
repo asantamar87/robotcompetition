@@ -25,6 +25,7 @@ public class RobotRegistry {
                 .collect(Collectors.toList());
     }
 
+    //FILTRAR robots que son GroundRobot y tienen una velocidad máxima mayor a minSpeed
     public List<GroundRobot> findFastGroundRobots(double minSpeed) {
         return robots.stream()
                 .filter(r -> r instanceof GroundRobot)
